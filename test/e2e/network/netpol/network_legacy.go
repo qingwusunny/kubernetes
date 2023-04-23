@@ -2143,7 +2143,7 @@ func createNetworkClientPodWithRestartPolicy(f *framework.Framework, namespace *
 					Command: []string{"/bin/sh"},
 					Args: []string{
 						"-c",
-						fmt.Sprintf("for i in $(seq 1 5); do /agnhost connect %s --protocol %s --timeout 8s && exit 0 || sleep 1; done; exit 1", net.JoinHostPort(targetService.Spec.ClusterIP, strconv.Itoa(targetPort)), connectProtocol),
+						fmt.Sprintf("sleep 10; for i in $(seq 1 5); do /agnhost connect %s --protocol %s --timeout 8s && exit 0 || sleep 1; done; exit 1", net.JoinHostPort(targetService.Spec.ClusterIP, strconv.Itoa(targetPort)), connectProtocol),
 					},
 				},
 			},

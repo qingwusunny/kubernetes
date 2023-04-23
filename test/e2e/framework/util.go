@@ -439,7 +439,7 @@ func countEndpointsNum(e *v1.Endpoints) int {
 
 // restclientConfig returns a config holds the information needed to build connection to kubernetes clusters.
 func restclientConfig(kubeContext string) (*clientcmdapi.Config, error) {
-	Logf(">>> kubeConfig: %s", TestContext.KubeConfig)
+	//Logf(">>> kubeConfig: %s", TestContext.KubeConfig)
 	if TestContext.KubeConfig == "" {
 		return nil, fmt.Errorf("KubeConfig must be specified to load client config")
 	}

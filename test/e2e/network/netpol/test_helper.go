@@ -68,6 +68,7 @@ func UpdatePolicy(k8s *kubeManager, policy *networkingv1.NetworkPolicy, namespac
 func ValidateOrFail(k8s *kubeManager, model *Model, testCase *TestCase) {
 	ginkgo.By("Validating reachability matrix...")
 
+	time.Sleep(time.Second * 10)
 	// 1st try
 	ginkgo.By("Validating reachability matrix... (FIRST TRY)")
 	ProbePodToPodConnectivity(k8s, model, testCase)

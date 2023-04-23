@@ -141,6 +141,7 @@ func (k *kubeManager) executeRemoteCommand(namespace string, pod string, contain
 		CaptureStdout:      true,
 		CaptureStderr:      true,
 		PreserveWhitespace: false,
+		Quiet:              true,
 	})
 }
 
