@@ -71,7 +71,7 @@ func initReg() RegistryList {
 	registry := RegistryList{
 		GcAuthenticatedRegistry:  "gcr.io/authenticated-image-pulling",
 		E2eRegistry:              "gcr.io/kubernetes-e2e-test-images",
-		PromoterE2eRegistry:      "k8s.gcr.io/e2e-test-images",
+		PromoterE2eRegistry:      "registry.smtx.io/everoute",
 		BuildImageRegistry:       "k8s.gcr.io/build-image",
 		InvalidRegistry:          "invalid.com/invalid",
 		GcEtcdRegistry:           "k8s.gcr.io",
